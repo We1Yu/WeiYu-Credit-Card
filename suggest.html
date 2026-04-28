@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能卡片推薦 - 信用卡推薦指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo" style="text-decoration: none;">Credit Card</a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">特色分類 ▼</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#domestic">國內消費</a>
+                        <a href="index.html#overseas">出國旅遊(旅日首選)</a>
+                        <a href="index.html#online">網購/行動支付</a>
+                        <a href="index.html#lifestyle">生活風格/分期</a>
+                    </div>
+                </li>
+                <li><a href="knowledge.html">基本知識</a></li>
+                <li><a href="suggest.html">智能卡片推薦</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card-section" style="max-width: 800px; margin: 0 auto;">
+            <div class="category-header">
+                <h2>智能卡片推薦</h2>
+            </div>
+            <div class="suggest-container"
+                style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+
+                <h3>1. 請選擇您擁有的信用卡</h3>
+                <div class="owned-cards-grid" id="owned-cards-grid">
+                </div>
+
+                <h3 style="margin-top: 30px;">2. 請選擇您現在的消費情境或搜尋商店</h3>
+                <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+                    <input type="text" id="store-search" class="scenario-select" placeholder="例如：7-11, 中油, momo, 餐廳..."
+                        style="flex: 1; min-width: 200px; margin-top: 0;">
+                    <span style="display: flex; align-items: center; color: #777; font-weight: bold;">或</span>
+                    <select id="scenario-select" class="scenario-select"
+                        style="flex: 1; min-width: 200px; margin-top: 0;">
+                        <option value="">請從清單挑選情境...</option>
+                        <option value="domestic">國內一般消費</option>
+                        <option value="overseas">出國旅遊 (海外實體)</option>
+                        <option value="japan">日本旅遊</option>
+                        <option value="online">網路購物 (PChome, 淘寶等)</option>
+                        <option value="mobile_pay">行動支付 (LINE Pay, 街口, Apple Pay等)</option>
+                        <option value="convenience">便利商店 (7-11, 全家等)</option>
+                        <option value="gas">加油站</option>
+                        <option value="restaurant">實體餐廳</option>
+                    </select>
+                </div>
+
+                <button class="detail-btn suggest-btn" onclick="recommendCard()"
+                    style="margin-top: 25px; width: 100%; font-size: 1.1rem; padding: 12px;">推薦最佳卡片</button>
+
+                <div id="recommendation-result" style="margin-top: 30px; display: none;">
+                    <h3 style="text-align: center; color: var(--accent-color);">🌟 推薦使用 🌟</h3>
+                    <div id="recommended-card-info" style="text-align: center; margin-top: 15px;">
+                        <!-- 推薦結果將顯示在這裡 -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 信用卡推薦網站 | 謹慎理財 信用至上</p>
+        <div class="update-time-container">
+            <span class="update-icon">🕒</span>
+            <span>最後更新時間：<span id="last-update-time"></span></span>
+        </div>
+    </footer>
+
+    <!-- 彈窗結構 -->
+    <div id="card-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣熱門信用卡推薦指南</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo" style="text-decoration: none;">Credit Card</a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">特色分類 ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#domestic">國內消費</a>
+                        <a href="#overseas">出國旅遊(旅日首選)</a>
+                        <a href="#online">網購/行動支付</a>
+                        <a href="#lifestyle">生活風格/分期</a>
+                    </div>
+                </li>
+                <li><a href="knowledge.html">基本知識</a></li>
+                <li><a href="suggest.html">智能卡片推薦</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <div class="carousel-item">
+                <a href="https://reurl.cc/4lNxEK" target="_blank"><img src="./picture/UBeard輪播圖.png"
+                        alt="UBeard輪播圖"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://reurl.cc/R2k5YZ" target="_blank"><img src="./picture/國泰cube輪播圖.png"
+                        alt="國泰cube輪播圖"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://reurl.cc/18O96X" target="_blank"><img src="./picture/匯豐輪播圖.png" alt="匯豐輪播圖"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://reurl.cc/6Gq81d" target="_blank"><img src="./picture/富邦J卡輪播圖.png" alt="富邦J卡輪播圖"></a>
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="carousel-indicators">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="domestic" class="card-section">
+            <div class="category-header">
+                <h2> 國內一般消費推薦</h2>
+            </div>
+
+            <div class="card-grid">
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/永豐DAWHO現金回饋卡.jpg" alt="永豐DAWHO現金回饋卡">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">永豐DAWHO現金回饋卡</h3>
+                        <p class="advantages">指定通路加碼5%，國內最高7%</p>
+                        <p class="reward-text">最高 7 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('dawho')">查看詳情</button>
+                    </div>
+
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/台新Richart卡.jpg" alt="台新 Richart 卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">台新 Richart 卡</h3>
+                        <p class="advantages">整合升級！切換七大方案，指定通路最高3.8%</p>
+                        <p class="reward-text">最高 3.8 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('gogo')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/滙豐現金回饋御璽卡.jpg" alt="滙豐現金回饋御璽卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">滙豐現金回饋御璽卡</h3>
+                        <p class="advantages">國內無腦刷，回饋無上限</p>
+                        <p class="reward-text">無上限 1.22 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('cashback_visa')">查看詳情</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/聯邦LINE Bank聯名卡.jpg" alt="聯邦LINE Bank聯名卡">
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-name">聯邦LINE Bank聯名卡</h3>
+                        <p class="advantages">國內外1%回饋無上限，日常實用</p>
+                        <p class="reward-text">無上限 1 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('line_bank')">查看詳情</button>
+                    </div>
+
+                </div>
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/國泰CUBE卡.jpg" alt="國泰CUBE卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">國泰 CUBE 卡</h3>
+                        <p class="advantages"> 最新分級制！依等級享 2%~3.3% 小樹點回饋</p>
+                        <p class="reward-text">最高 3.3 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('cube')">查看詳情</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="overseas" class="card-section">
+            <div class="category-header">
+                <h2> 出國旅遊(旅日首選)</h2>
+            </div>
+
+            <div class="card-grid">
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/富邦J卡.jpg" alt="富邦J卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">富邦J卡</h3>
+                        <p class="advantages">日韓實體消費加碼後最高可達 10%</p>
+                        <p class="reward-text">最高 10 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('fubon_j')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/聯邦吉鶴卡.jpg" alt="聯邦吉鶴卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">聯邦吉鶴卡</h3>
+                        <p class="advantages">日本實體消費 2.5% 無上限，Apple Pay加碼最高4%</p>
+                        <p class="reward-text">最高 4 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('giho')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/日本熊本熊卡.jpg" alt="日本熊本熊卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">日本熊本熊卡</h3>
+                        <p class="advantages">日本實體通路最高 8.5% 回饋</p>
+                        <p class="reward-text">最高 8.5 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('kumamon')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/永豐現金回饋JCB卡.jpg" alt="永豐現金回饋JCB卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">永豐現金回饋JCB卡</h3>
+                        <p class="advantages">基本海外2% + 日本加碼3% + 滿額最高10%</p>
+                        <p class="reward-text">最高 10 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('sinopac_jcb')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/台新FlyGo卡.jpg" alt="台新FlyGo卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">台新 FlyGo 卡</h3>
+                        <p class="advantages">精選航旅最高 5% 回饋</p>
+                        <p class="reward-text">最高 5 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('flygo')">查看詳情</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="online" class="card-section">
+            <div class="category-header">
+                <h2> 網購&行動支付</h2>
+            </div>
+
+            <div class="card-grid">
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/玉山U Bear卡.jpg" alt="玉山U Bear卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">玉山U Bear卡</h3>
+                        <p class="advantages">網購最高 3%，數位訂閱最高 10% 現金回饋</p>
+                        <p class="reward-text">最高 10 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('ubear')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/台北富邦momo聯名卡.jpg" alt="台北富邦momo聯名卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">台北富邦momo聯名卡</h3>
+                        <p class="advantages">momo購物網最高 5% 回饋</p>
+                        <p class="reward-text">最高 5 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('momo')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/永豐SPORT卡.jpg" alt="永豐SPORT卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">永豐SPORT卡</h3>
+                        <p class="advantages">指定行動支付，運動健身滿足條件，最高 7% 回饋</p>
+                        <p class="reward-text">最高 7 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('sport')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/凱基魔BUY卡.jpg" alt="凱基魔BUY卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">凱基魔BUY卡</h3>
+                        <p class="advantages">綁定 Apple Pay、LINE Pay、街口等，最高 4% 回饋</p>
+                        <p class="reward-text">最高 4 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('magi')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/國泰世華蝦皮購物聯名卡.jpg" alt="國泰世華蝦皮購物聯名卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">國泰世華蝦皮購物聯名卡</h3>
+                        <p class="advantages">蝦皮購物最高 10% 蝦幣回饋</p>
+                        <p class="reward-text">最高 10 % 回饋</p>
+                        <button class="detail-btn" onclick="openModal('shopee')">查看詳情</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="lifestyle" class="card-section">
+            <div class="category-header">
+                <h2> 生活風格/分期</h2>
+            </div>
+
+            <div class="card-grid">
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/永豐銀行 保倍卡.jpg" alt="永豐銀行 保倍卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">永豐銀行 保倍卡</h3>
+                        <p class="advantages">單筆一般消費達2,000(含)元以上，享3期分期0利率</p>
+                        <p class="reward-text">3期分期0利率</p>
+                        <button class="detail-btn" onclick="openModal('sinopac_baby')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/匯豐銀行 匯鑽卡.jpg" alt="匯豐銀行 匯鑽卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">匯豐銀行 匯鑽卡</h3>
+                        <p class="advantages">指定商店單筆消費滿新台幣一千元，可享消費分期3期或6期0利率方案</p>
+                        <p class="reward-text">分期3期或6期0利率方案</p>
+                        <button class="detail-btn" onclick="openModal('hsbc_diamond')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/第一銀行 iLeo卡.jpg" alt="第一銀行 iLeo卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">第一銀行 iLeo卡</h3>
+                        <p class="advantages">單筆一般消費滿3,000元，完成登錄享3期分期0利率</p>
+                        <p class="reward-text">3期分期0利率</p>
+                        <button class="detail-btn" onclick="openModal('first_ileo')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/台新銀行 新光三越聯名卡.jpg" alt="台新銀行 新光三越聯名卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">台新銀行 新光三越聯名卡</h3>
+                        <p class="advantages">新光三越指定專櫃滿額最高10%回饋</p>
+                        <p class="reward-text">最高 10 % 回饋 / 分期0利率</p>
+                        <button class="detail-btn" onclick="openModal('taishin_shinkong')">查看詳情</button>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-img-placeholder"><img src="./picture/元大 分享黑啤卡.jpg" alt="元大 分享黑啤卡"></div>
+                    <div class="card-info">
+                        <h3 class="card-name">元大 分享黑啤卡</h3>
+                        <p class="advantages">國內商店最高12期0利率，再享0.5%回饋</p>
+                        <p class="reward-text">12期0利率</p>
+                        <button class="detail-btn" onclick="openModal('yuantadabest_share')">查看詳情</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 信用卡推薦網站 | 謹慎理財 信用至上</p>
+        <div class="update-time-container">
+            <span class="update-icon">🕒</span>
+            <span>最後更新時間：<span id="last-update-time"></span></span>
+        </div>
+    </footer>
+
+    <div id="card-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
