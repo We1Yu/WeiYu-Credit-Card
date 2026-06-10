@@ -8,12 +8,12 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    /* 預留給固定導覽列的空間 */
 }
 
 body {
     font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
     margin: 0;
+    padding-top: 100px;
     background-color: var(--bg-light);
     color: var(--primary-color);
 }
@@ -31,10 +31,6 @@ body {
     padding: 1rem 5%;
     z-index: 1000;
     box-sizing: border-box;
-}
-
-body {
-    padding-top: 100px;
 }
 
 .logo {
@@ -82,7 +78,7 @@ body {
     display: block;
 }
 
-/* 1. 確保大容器橫向排列 */
+/* 卡片格線 */
 .card-grid {
     display: flex;
     justify-content: center;
@@ -91,59 +87,25 @@ body {
     background-color: transparent;
 }
 
-/* 2. 製作白色的卡片方框 */
+/* 單張卡片 */
 .card-item {
-    background-color: #ffffff;
+    flex: 1;
+    background: transparent;
+    text-align: center;
+    padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 20px;
-    width: 220px;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    transition: transform 0.2s;
 }
 
 .card-item:hover {
+    background-color: #f8fbff;
     transform: translateY(-5px);
 }
 
-/* 3. 圖片佔位符樣式 */
-.card-img-placeholder {
-    width: 100%;
-    height: 120px;
-    background-color: transparent !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-/* 4. 文字與回饋樣式 */
-.card-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.advantages {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 12px;
-    min-height: 40px;
-}
-
-.reward-text {
-    color: #ff0000;
-    font-weight: bold;
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-/* 卡片圖示 */
+/* 圖片容器 */
 .card-img-placeholder {
     width: 100%;
     height: 120px;
@@ -160,37 +122,10 @@ body {
     max-height: 100%;
     object-fit: contain;
     border-radius: 8px;
-}
-
-
-
-/* 修改單個卡片：去掉邊框，增加懸停效果 */
-.card-item {
-    flex: 1;
-    background: transparent;
-    text-align: center;
-    padding: 15px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 懸停時稍微放大並變色 */
-.card-item:hover {
-    background-color: #f8fbff;
-    transform: translateY(-5px);
-}
-
-*/ .card-img-placeholder img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
 }
 
-/* 文字層次優化 */
+/* 文字樣式 */
 .card-name {
     font-size: 1.05rem;
     color: #333;
@@ -211,19 +146,18 @@ body {
 }
 
 .reward-text {
-    color: #e74c3c;
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 1.1rem;
     margin-bottom: 15px;
 }
 
-/* 按鈕美化 */
+/* 按鈕 */
 .detail-btn {
-    background-color: #ffffff;
+    background-color: var(--white);
     border: 1.5px solid #eee;
     color: #555;
     border-radius: 50px;
-    /* 膠囊型按鈕 */
     padding: 6px 18px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -237,72 +171,20 @@ body {
     border-color: var(--primary-color);
 }
 
-/* 5. 按鈕樣式 */
-.detail-btn {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 0.85rem;
-}
-
-.detail-btn:hover {
-    background-color: #e0e0e0;
-}
-
-/* 這是唯一的大白框 */
-.main-container {
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 30px;
-}
-
-/* 分類區塊樣式 */
-.category-block {
-    margin-bottom: 40px;
-}
-
-.category-title {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    border-left: 5px solid #2c3e50;
-}
-
-/* 內部的卡片行：去掉原本的陰影與背景 */
-.unified-card-row {
-    display: flex;
-    justify-content: space-between;
-    background: transparent;
-    padding: 10px 0;
-}
-
-/* 每一格卡片 */
-.item-segment {
-    flex: 1;
+/* 分類標題 */
+.card-section h2 {
     text-align: center;
-    padding: 15px;
-    transition: background 0.3s;
-    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
 }
 
-/* 滑鼠移上去時，在大框框內稍微變色提示 */
-.item-segment:hover {
-    background-color: #f9f9f9;
+.category-header h2 {
+    text-align: center;
 }
 
-/* 分隔線 */
-.section-divider {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 20px 0 40px 0;
-}
-
-/* 彈窗背景 */
+/* 彈窗 */
 .modal {
     display: none;
     position: fixed;
@@ -312,10 +194,13 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-
 }
 
-/* 彈窗白框 */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
@@ -328,7 +213,6 @@ body {
     animation: slideDown 0.3s ease-out;
 }
 
-/* 關閉按鈕 */
 .close-btn {
     position: absolute;
     right: 20px;
@@ -343,9 +227,8 @@ body {
     color: #000;
 }
 
-/* 彈窗內的詳細內容樣式 */
 .modal-detail-title {
-    color: #2c3e50;
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -354,75 +237,7 @@ body {
     line-height: 1.6;
 }
 
-/* 外層唯一的大框框 */
-.unified-card-container {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    padding: 20px;
-    align-items: stretch;
-}
-
-/* 每一格的樣式 (不再有獨立背景) */
-.item-segment {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-}
-
-/* 內部的文字與圖片佔位符樣式維持 */
-.card-img-placeholder {
-    background-color: #dddddd;
-    height: 100px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.card-name {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.bank-name {
-    font-size: 0.85rem;
-    color: #777;
-}
-
-.reward-text {
-    color: #ff0000;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.detail-btn {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 4px 10px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-/* 讓所有 section 內的 h2 標題置中 */
-.card-section h2 {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-}
-
-.category-header h2 {
-    text-align: center;
-}
-
-/* 輪播圖樣式 */
+/* 輪播圖 */
 .carousel-container {
     position: relative;
     max-width: 1200px;
@@ -500,7 +315,7 @@ body {
     background-color: white;
 }
 
-/* 智能推薦頁面樣式 */
+/* 智能推薦頁面 */
 .owned-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -560,7 +375,7 @@ body {
     margin-top: 10px;
 }
 
-/* 頁尾與更新時間樣式 */
+/* 頁尾 */
 footer {
     text-align: center;
     padding: 20px 0;
